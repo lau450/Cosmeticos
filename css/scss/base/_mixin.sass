@@ -1,0 +1,17 @@
+@mixin grid($val) {
+  @each $name, $value in $colors {
+    .bg-#{$name} {
+      background-color: $value;
+    }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap: 2rem;
+  }
+
+      
+  @keyframes fadeUp {
+    0% {
+      transform: translateY(4rem);
+      opacity: 0;
+    }
+  }
